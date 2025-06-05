@@ -55,28 +55,28 @@ import pandas as pd
 # Load model and scalers
 model = pickle.load(open('models/weather_model2.pkl', 'rb'))
 scaler = pickle.load(open('models/weather_scaler2.pkl', 'rb'))
-date_scaler = pickle.load(open('models/weather_date_scaler.pkl', 'rb'))
+    date_scaler = pickle.load(open('models/weather_date_scaler.pkl', 'rb'))
 
-# Prepare new data (example)
-new_data = pd.DataFrame({
-    'date': ['2023-01-01'],
-    'pm10': [50],
-    'so2': [5],
-    'co': [30],
-    'o3': [25],
-    'no2': [15]
-})
+    # Prepare new data (example)
+    new_data = pd.DataFrame({
+        'date': ['2023-01-01'],
+        'pm10': [50],
+        'so2': [5],
+        'co': [30],
+        'o3': [25],
+        'no2': [15]
+    })
 
-# Preprocess data (simplification - actual preprocessing would depend on your pipeline)
-new_data_processed = preprocess_data(new_data, scaler, date_scaler)
+    # Preprocess data (simplification - actual preprocessing would depend on your pipeline)
+    new_data_processed = preprocess_data(new_data, scaler, date_scaler)
 
-# Make prediction
-prediction = model.predict(new_data_processed)
-```
+    # Make prediction
+    prediction = model.predict(new_data_processed)
+    ```
 
-## Integration with Weather Prediction Website
+    ## Integration with Weather Prediction Website
 
-This model is designed to be integrated with a weather prediction website. The trained models can be accessed through an API or directly integrated into the backend system of the website to provide real-time air quality predictions for Jakarta.
+    This model is designed to be integrated with a weather prediction website. The trained models can be accessed through an API or directly integrated into the backend system of the website to provide real-time air quality predictions for Jakarta.
 
 ## Requirements
 

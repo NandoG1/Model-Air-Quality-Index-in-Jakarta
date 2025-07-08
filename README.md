@@ -48,3 +48,5 @@ The model was developed using:
 - Scikit-learn
 - Matplotlib
 - Jupyter Notebook
+
+## Lisence
